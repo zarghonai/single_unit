@@ -3,7 +3,7 @@ Scripts for the PD DBS single unit analysis.
 
 Folders are labeled according to what part of the pipeline the scripts are required for.
 
-1. Neural folder-contains scripts for:
+1. Neural:
 
       a. N1-Cleaning up neural data from Alpha Omega
 
@@ -13,6 +13,11 @@ Folders are labeled according to what part of the pipeline the scripts are requi
 
       d. N6-N7-Determining the firing rate and waveform properties of the neurons
    
-3. Behavior folder-contains script for:
+3. Behavior:
    
       a. B1-converting the behavioral JSON file to a mat file
+   
+5. Alignment:
+
+      a. A1-lining up the behavioral and neural data with the timings of the Alpha Omega
+ 
