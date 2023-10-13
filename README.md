@@ -11,6 +11,8 @@ Folders are labeled according to what part of the pipeline the scripts are requi
 
       c. N3-5-Post-processing of neural data that was sorted through OSort to finalize the number of single unit neurons in the recording
 
+               i. Use the merge template excel sheet for N4 
+
       d. N6-N7-Determining the firing rate and waveform properties of the neurons
    
 3. Behavior:
