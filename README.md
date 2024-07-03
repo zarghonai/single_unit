@@ -23,5 +23,15 @@ Folders are labeled according to what part of the pipeline the scripts are requi
 
       a. A1-lining up the behavioral and neural data with the timings of the Alpha Omega
 
+6. Modeling:
 
- All_code_funcs - gets all the data and puts it in an array 
+     a. M1-sets up parameters for modeling according to each block, uses the functions in the modeling file 
+
+     b. M2-calculates RPE
+
+Further analysis:
+ All_code_funcs-gets all the data and puts it in an array 
+ Regression analysis-does the glm analysis for the expectation period and the feedback period
+
+Sample data:
+Behavioral data as well as pre-processed neural data (what we would get after script A1) are in the behav_neural_data file
