@@ -175,6 +175,7 @@ big_brain_data = [all_normalized_baseline_fr, all_normalized_feedback_fr, all_ou
 previous_action = [];
 previous_reward = [];
 previous_reward_outcome = [];
+previous_rpe = [];
 
 for a = 1:n_subjects
     subj{a,1} = filenames(a).name; %listing out our file names 
@@ -204,8 +205,22 @@ for a = 1:n_subjects
     pr_reward_outcome3 = NaN(length(outcomes3),1);
     pr_reward_outcome3(2:end) = outcomes3(1:end-1);
     pr_reward_outcome = [pr_reward_outcome1' pr_reward_outcome2' pr_reward_outcome3']';
+    %previous rpe
+    pr_rpe1 = NaN(length(all_rpes{1,a}(:,1)),1);
+    pr_rpe1(2:end) = all_rpes{1,a}(1:end-1,1);
+    pr_rpe2 = NaN(length(all_rpes{1,a}(:,2)),1);
+    pr_rpe2(2:end) = all_rpes{1,a}(1:end-1,2);
+    pr_rpe3 = NaN(length(all_rpes{1,a}(:,3)),1);
+    pr_rpe3(2:end) = all_rpes{1,a}(1:end-1,3);
+    pr_rpe = [pr_rpe1' pr_rpe2' pr_rpe3']';
     for b = 1:length(useNegative)
         neurons_360_2 = [733, 702];
+        clear pr_rpe
+        pr_rpe = [pr_rpe1', pr_rpe2', pr_rpe3']';
+        if ismember(useNegative(b), neurons_360_2)
+            pr_rpe = pr_rpe(2:end);
+            pr_rpe(1) = NaN;
+        end
         previous_action = vertcat(previous_action, pr_action);
         previous_reward = vertcat(previous_reward, pr_reward);
         previous_reward_outcome = vertcat(previous_reward_outcome, pr_reward_outcome);
