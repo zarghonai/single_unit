@@ -22,4 +22,6 @@ Folders are labeled according to what part of the pipeline the scripts are requi
 5. Alignment:
 
       a. A1-lining up the behavioral and neural data with the timings of the Alpha Omega
- 
+
+
+ All_code_funcs - gets all the data and puts it in an array 
