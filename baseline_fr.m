@@ -1,10 +1,10 @@
 function [stats_plot] = baseline_fr(spxtimes,trigtimes,pretime,varargin)
-%% idk what i'm doing 
+%% 
 spxtimes  = spxtimes*1000;
 trigtimes = trigtimes*1000;
 %pre   = 3000;
 pre = pretime;
-post  = 0;
+post  = 1000;
 %post = posttime;
 fr    = 0;
 tb    = 1;

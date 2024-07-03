@@ -34,7 +34,7 @@ all_no_z_baseline_fr = [];
 all_no_z_feedback_fr = [];
 all_fr_400 = [];
 all_fr_400_norm = [];
-%% do everything else?
+%% 
 %n_trials = 105;
 %block order-column 6
 %block_number = zeros(n_trials,1);
@@ -129,9 +129,6 @@ for a = 1:n_subjects
         normalized_feedback_fr = normalized_feedback_fr';
         no_z_baseline_fr = no_z_baseline_fr';
         no_z_feedback_fr = no_z_feedback_fr';
-        %now we put it all together and pray it doesn't turn into a big
-        %mess
-        %gonna use a lot of vertcat
         %store everything in separate vectors and then put it all together
         %neuron number-column 7
         clear neuron_number
