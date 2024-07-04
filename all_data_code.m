@@ -1,3 +1,6 @@
+%%
+M1_modeling_parameters
+M2_rpe_calcs
 %% getting the files ready 
 filenames = dir('/Users/lab/Desktop/Saez Lab/Desktop/DBS Slot Machine Pt/pt_*/*_raster_data.mat');
 n_subjects = length(filenames);
@@ -101,7 +104,7 @@ for a = 1:n_subjects
         end
         %baseline_mean = mean(mean(all_baseline_fr(:,1:100)));
         for cc = 1:length(all_baseline_fr)
-            baseline_values{cc,:} = all_baseline_fr{cc,1}(1:end-100);
+            baseline_values{cc,:} = all_baseline_fr{cc,1}(1:end-1000);
         end
         baseline_mean = {mean(cat(2,baseline_values{:}))};
         baseline_std = {std(cat(2,baseline_values{:}))};

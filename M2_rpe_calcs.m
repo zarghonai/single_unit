@@ -84,7 +84,7 @@ for i=1:n_subjects
         all_neuron_rpe = vertcat(all_neuron_rpe, rpe_total);
     end
 end
-
+clearvars -except all_neuron_rpe all_rpes
 % mu = [0.8,0.2];
 % reversal_trials = [13,25];
 % alpha = all_params(1,3);
